@@ -1,11 +1,11 @@
 install:
 	uv sync
 
-mind-games:
-	uv run maind-games
+brain-games:
+	uv run brain-games
 
 build:
-	uv-build
+	uv build
 
 
 package-install:

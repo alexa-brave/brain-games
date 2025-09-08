@@ -18,9 +18,18 @@ def welcome_user():  # приветствие игрока
 def main():  # функция - точка входа для brain_even
     name = welcome_user()
     if first_question() is True:
+        print('Correct!')
         if second_question() is True:
+            print('Correct!')
             if third_question() is True:
+                print('Correct!')
                 print(f"Congratulations, {name}!")
+            else:
+                print(f"Let's try again, {name}!")
+        else:
+            print(f"Let's try again, {name}!")
+    else:
+        print(f"Let's try again, {name}!")
     
 
 def first_question():  # первый вопрос
@@ -30,19 +39,19 @@ def first_question():  # первый вопрос
     even = first_number % 2 == 0  # проверка на чётность
     if even:
         if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
     else:
         if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
 
 
@@ -53,19 +62,19 @@ def second_question():  # второй вопрос
     even = second_number % 2 == 0  # проверка на чётность
     if even:
         if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
     else:
         if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
 
 def third_question():   # третий вопрос
@@ -75,19 +84,19 @@ def third_question():   # третий вопрос
     even = third_number % 2 == 0  # проверка на чётность
     if even:
         if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
     else:
         if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
-            print('Correct!')
+            # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
             print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
 
 if __name__ == "__main__":

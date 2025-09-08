@@ -5,6 +5,10 @@ import prompt
 # число. И ему нужно ответить yes,если
 # число чётное, или no — если нечётное.
 
+# проблема: нужно использовать return помимо print в функциях вопросов
+# проблема: добавить рандомизацию чисел в функциях вопросов
+# проблема: игра завершается после первого прохождения цикла
+
 def welcome_user():  # приветствие игрока
     print('Welcome to the Brain Games!')
     # узнаём имя и обращаемся по нему
@@ -15,7 +19,7 @@ def welcome_user():  # приветствие игрока
     return name
 
 
-def main():
+def main():  # функция - точка входа для brain_even
     welcome_user()
     if first_question() == 'Correct!':
         if second_question() == 'Correct!':
@@ -23,7 +27,7 @@ def main():
                 print(f"Congratulations, {name}!")
     
 
-def first_question():
+def first_question():  # первый вопрос
     print('Question: 15')
     ancwer = prompt.string('Your answer: ')
     if ancwer == 'no':
@@ -32,7 +36,7 @@ def first_question():
         print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
         print("Let's try again, {name}!")
 
-def second_question():
+def second_question():  # второй вопрос
     print('Question: 6')
     ancwer = prompt.string('Your answer: ')
     if ancwer == 'yes':
@@ -41,7 +45,7 @@ def second_question():
         print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
         print("Let's try again, {name}!")
 
-def third_question():
+def third_question():   # третий вопрос
     print('Question: 7')
     ancwer = prompt.string('Your answer: ')
     if ancwer == 'no':

@@ -1,13 +1,9 @@
 from os import name
 import prompt
-
+from random import randint
 # Пользователю показывается случайное
 # число. И ему нужно ответить yes,если
 # число чётное, или no — если нечётное.
-
-# проблема: нужно использовать return помимо print в функциях вопросов
-# проблема: добавить рандомизацию чисел в функциях вопросов
-# проблема: игра завершается после первого прохождения цикла
 
 def welcome_user():  # приветствие игрока
     print('Welcome to the Brain Games!')
@@ -20,39 +16,79 @@ def welcome_user():  # приветствие игрока
 
 
 def main():  # функция - точка входа для brain_even
-    welcome_user()
-    if first_question() == 'Correct!':
-        if second_question() == 'Correct!':
-            if third_question() == 'Correct!':
+    name = welcome_user()
+    if first_question() is True:
+        if second_question() is True:
+            if third_question() is True:
                 print(f"Congratulations, {name}!")
     
 
 def first_question():  # первый вопрос
-    print('Question: 15')
+    first_number: int = randint(-100, 100)
+    print(f"Question: {first_number}")
     ancwer = prompt.string('Your answer: ')
-    if ancwer == 'no':
-        print('Correct!')
+    even = first_number % 2 == 0  # проверка на чётность
+    if even:
+        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print("Let's try again, {name}!")
+            return False
     else:
-        print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
-        print("Let's try again, {name}!")
+        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
+            print("Let's try again, {name}!")
+            return False
+
 
 def second_question():  # второй вопрос
-    print('Question: 6')
+    second_number: int = randint(-100, 100)
+    print(f"Question: {second_number}")
     ancwer = prompt.string('Your answer: ')
-    if ancwer == 'yes':
-        print('Correct!')
+    even = second_number % 2 == 0  # проверка на чётность
+    if even:
+        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print("Let's try again, {name}!")
+            return False
     else:
-        print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
-        print("Let's try again, {name}!")
+        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
+            print("Let's try again, {name}!")
+            return False
 
 def third_question():   # третий вопрос
-    print('Question: 7')
+    third_number: int = randint(-100, 100)
+    print(f"Question: {third_number}")
     ancwer = prompt.string('Your answer: ')
-    if ancwer == 'no':
-        print('Correct!')
+    even = third_number % 2 == 0  # проверка на чётность
+    if even:
+        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print("Let's try again, {name}!")
+            return False
     else:
-        print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
-        print("Let's try again, {name}!")
+        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+            print('Correct!')
+            return True  # возврат булевого значения для функции main
+        else:
+            print(f"'{ancwer}' is wrong answer ;(. Correct answer was 'no'.")
+            print("Let's try again, {name}!")
+            return False
 
 if __name__ == "__main__":
     main()

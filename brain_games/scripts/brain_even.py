@@ -38,7 +38,7 @@ def first_question():  # первый вопрос
     ancwer = prompt.string('Your answer: ')
     even = first_number % 2 == 0  # проверка на чётность
     if even:
-        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+        if ancwer == 'yes':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
@@ -46,7 +46,7 @@ def first_question():  # первый вопрос
             # print(f"Let's try again, {player_name}!")
             return False
     else:
-        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+        if ancwer == 'no':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
@@ -61,7 +61,7 @@ def second_question():  # второй вопрос
     ancwer = prompt.string('Your answer: ')
     even = second_number % 2 == 0  # проверка на чётность
     if even:
-        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+        if ancwer == 'yes':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
@@ -69,7 +69,7 @@ def second_question():  # второй вопрос
             # print(f"Let's try again, {player_name}!")
             return False
     else:
-        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+        if ancwer == 'no':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
@@ -83,7 +83,7 @@ def third_question():   # третий вопрос
     ancwer = prompt.string('Your answer: ')
     even = third_number % 2 == 0  # проверка на чётность
     if even:
-        if ancwer == 'yes' or ancwer == 'Yes':  # проверка ввода пользователя
+        if ancwer == 'yes':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:
@@ -91,7 +91,7 @@ def third_question():   # третий вопрос
             # print(f"Let's try again, {player_name}!")
             return False
     else:
-        if ancwer == 'no' or ancwer == 'No':  # проверка ввода пользователя
+        if ancwer == 'no':  # проверка ввода пользователя
             # print('Correct!')
             return True  # возврат булевого значения для функции main
         else:

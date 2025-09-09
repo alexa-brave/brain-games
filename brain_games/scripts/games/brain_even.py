@@ -1,18 +1,13 @@
 from os import name
 import prompt
 from random import randint
+from welcome_user import welcome_user
 # Пользователю показывается случайное
 # число. И ему нужно ответить yes,если
 # число чётное, или no — если нечётное.
 
-def welcome_user():  # приветствие игрока
-    print('Welcome to the Brain Games!')
-    # узнаём имя и обращаемся по нему
-    player_name = prompt.string('May I have your name? ')
-    print(f'Hello, {player_name}!')
-    # объясняем игроку суть игры
+def start():  # объясняем правила игры
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    return player_name
 
 
 def main():  # функция - точка входа для brain_even

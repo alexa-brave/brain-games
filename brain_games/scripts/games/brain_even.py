@@ -1,7 +1,8 @@
 from os import name
 import prompt
 from random import randint
-from welcome_user import welcome_user
+from ..welcome_user import welcome_user
+
 # Пользователю показывается случайное
 # число. И ему нужно ответить yes,если
 # число чётное, или no — если нечётное.

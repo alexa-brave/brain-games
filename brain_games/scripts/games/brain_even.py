@@ -97,3 +97,12 @@ def third_question():   # третий вопрос
 
 if __name__ == "__main__":
     main()
+
+
+# even == 1 рандомное число, истинный ответ, тексты развилки ответа
+# calc == 2 рандомных числа и рандомный операнд, истинный ответ, тексты развилки ответа
+
+def is_even_game():  # выбор неизвестных для одного раунда игры brain_even
+    unknown: int = (randint(0, 100))
+    correct_answer = 'yes' if unknown % 2 == 0 else 'no'
+    return unknown, correct_answer

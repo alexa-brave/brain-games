@@ -31,7 +31,7 @@ def choice_numbers():
     return num_1, num_2
 
 
-def operation_signs(num_1, num_2):  # выбор операнда
+def operation_signs(num_1, num_2):  # выбор операнда и вычисление
 
     signs: list = ['+', '-', '*'] # используемые операнды
     play_signs = choice(signs)  # рандомизация выбора операнда
@@ -42,3 +42,16 @@ def operation_signs(num_1, num_2):  # выбор операнда
     else:
         result = num_1 * num_2
     return result
+
+
+
+def calc_game():  # выбор неизвестных для одного раунда игры brain_calc
+    num_1, num_2 = (randint(0, 100), randint(0, 100))
+    operation_signs = choice(['+', '-', '*'])
+    match operation_signs:
+        case '+':
+            return num_1 + num_2
+        case '-':
+            return num_1 - num_2
+        case '*':
+            return num_1 * num_2

@@ -1,5 +1,6 @@
 from random import randint  # для случайного выбора чисел
 from random import choice  # для случайного выбора оперантов
+from games_logic import question
 
 # Калькулятор; делаем только +, - и *
 # Операции, как и числа, выбираются случайным образом (другой блок random)
@@ -25,33 +26,45 @@ from random import choice  # для случайного выбора опера
 
 # math.isnan(X) - является ли X NaN (Not a Number - не число).
 
-def choice_numbers():
-    num_1: int = randint(-100, 100)
-    num_2: int = randint(-100, 100)
-    return num_1, num_2
-
-
-def operation_signs(num_1, num_2):  # выбор операнда и вычисление
-
-    signs: list = ['+', '-', '*'] # используемые операнды
-    play_signs = choice(signs)  # рандомизация выбора операнда
-    if play_signs == signs[0]:  # сопоставляем выбранный операнд с тем, какому индексу в списке он соответствует
-        result = num_1 + num_2  # производим соответствующую операцию с числами
-    elif play_signs == signs[1]:
-        result = num_1 - num_2
-    else:
-        result = num_1 * num_2
-    return result
-
-
-
 def calc_game():  # выбор неизвестных для одного раунда игры brain_calc
     num_1, num_2 = (randint(0, 100), randint(0, 100))
     operation_signs = choice(['+', '-', '*'])
     match operation_signs:
         case '+':
-            return num_1 + num_2
+            unknown = f"{num_1} + {num_2}"
+            correct_answer = num_1 + num_2
         case '-':
-            return num_1 - num_2
+            correct_answer = num_1 - num_2
         case '*':
-            return num_1 * num_2
+            correct_answer = num_1 * num_2
+    return unknown, correct_answer
+
+
+def start_brain_calc():
+    print('What is the result of the expression?')
+    # объясняем правила игры
+    cycle: int = 0 
+    while cycle != 3:
+        question(calc_game())
+
+
+
+
+
+# def choice_numbers():
+#     num_1: int = randint(-100, 100)
+#     num_2: int = randint(-100, 100)
+#     return num_1, num_2
+
+
+# def operation_signs(num_1, num_2):  # выбор операнда и вычисление
+
+#     signs: list = ['+', '-', '*'] # используемые операнды
+#     play_signs = choice(signs)  # рандомизация выбора операнда
+#     if play_signs == signs[0]:  # сопоставляем выбранный операнд с тем, какому индексу в списке он соответствует
+#         result = num_1 + num_2  # производим соответствующую операцию с числами
+#     elif play_signs == signs[1]:
+#         result = num_1 - num_2
+#     else:
+#         result = num_1 * num_2
+#     return result

@@ -1,10 +1,9 @@
 from random import randint  # для случайного выбора чисел
 from random import choice  # для случайного выбора оперантов
-from games_logic import question
+from brain_games.scripts.games_logic import question
 
 # Калькулятор; делаем только +, - и *
 # Операции, как и числа, выбираются случайным образом (другой блок random)
-# может пригодиться библиотека match
 
 # Общая логика для всех игр:
 # задать вопрос, получить ответ, сравнить ответ; везде 3 вопроса
@@ -13,39 +12,37 @@ from games_logic import question
 # Задачи:
 # написать код для этой игры в вакууме, подумать, как объединить
 # логику игр в один отдельный файл, сделать файл точку входа
-# main.py в scripts, сделать коротку команду brain_calc
-# аскинема в README.md, создать поддиректорию games для самих игр
-# общий код игр в отдельный модуль - движок,
-# который и будет использовать каждую игру внутри себя
+# main.py в scripts, аскинема в README.md
 
 # функция объяснения игроку правил мини-игры
 
-# math.fsum(последовательность) - сумма всех членов последовательности. 
-# Эквивалент встроенной функции sum(), но math.fsum() более точна для чисел 
-# с плавающей точкой.
-
-# math.isnan(X) - является ли X NaN (Not a Number - не число).
+# calc == 2 рандомных числа и рандомный операнд, истинный ответ, тексты развилки ответа
 
 def calc_game():  # выбор неизвестных для одного раунда игры brain_calc
     num_1, num_2 = (randint(0, 100), randint(0, 100))
-    operation_signs = choice(['+', '-', '*'])
+    operation_signs = choice(['+', '-', '*'])  # рандомизация выбора операнда
+    # выбираем действие и считаем результат
     match operation_signs:
         case '+':
             unknown = f"{num_1} + {num_2}"
-            correct_answer = num_1 + num_2
+            correct_answer = str(num_1 + num_2)
         case '-':
-            correct_answer = num_1 - num_2
+            unknown = f"{num_1} - {num_2}"
+            correct_answer = str(num_1 - num_2)
         case '*':
-            correct_answer = num_1 * num_2
+            unknown = f"{num_1} * {num_2}"
+            correct_answer = str(num_1 * num_2)
     return unknown, correct_answer
 
+# tasks:
+# встроить правила игры после приветствия
 
-def start_brain_calc():
-    print('What is the result of the expression?')
+def main():
     # объясняем правила игры
-    cycle: int = 0 
-    while cycle != 3:
-        question(calc_game())
+    print('What is the result of the expression?')
+    # запускаем универсальную для всех мини-игр функцию
+    # даём ей на вход неизвестное и правильный ответ для этой мини-игры
+    question(calc_game)
 
 
 
@@ -68,3 +65,6 @@ def start_brain_calc():
 #     else:
 #         result = num_1 * num_2
 #     return result
+
+if __name__ == "__main__":
+    main()

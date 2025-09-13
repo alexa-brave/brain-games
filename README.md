@@ -13,5 +13,5 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/alexa-brave/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alexa-brave/python-project-49/actions)
 
-## Demo brain-even:
-[![asciicast](https://asciinema.org/a/blSPI7JxoosYfJW2yBZgWfc9m.svg)](https://asciinema.org/a/blSPI7JxoosYfJW2yBZgWfc9m)
+## Demo brain-even and brain-calc:
+[![asciicast](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai.svg)](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai)

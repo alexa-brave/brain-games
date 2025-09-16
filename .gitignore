@@ -16,6 +16,7 @@ pip-wheel-metadata/
 # Логи и временные файлы
 *.log
 *.tmp
+*.cast
 
 # Файлы редакторов / IDE
 .vscode/

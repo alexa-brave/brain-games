@@ -15,3 +15,6 @@
 
 ## Demo brain-even and brain-calc:
 [![asciicast](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai.svg)](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai)
+
+## Demo brain-gcd and brain-calc:
+[![asciicast](https://asciinema.org/a/io4eowdu8VkrhtUwdpD1yo1FM.svg)](https://asciinema.org/a/io4eowdu8VkrhtUwdpD1yo1FM)

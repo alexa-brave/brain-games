@@ -30,7 +30,7 @@ def is_progression_game():  # выбор неизвестных для одно�
     subsequence.remove(correct_answer)  #  удаляем неизвестное из списка прогрессии
     subsequence.insert(position_unknown, '..')  # ставим вместо неизвестного '..'
     unknown: list = subsequence  # последовательность с пропущеным неизвестным
-    return unknown, str(correct_answer)
+    return str(unknown), str(correct_answer)
 
 
 def main():  # точка входа для мини-игры

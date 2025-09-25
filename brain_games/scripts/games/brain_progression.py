@@ -23,14 +23,17 @@ def is_progression_game():  # выбор неизвестных для одно�
 
     # выясняем оставшиеся числа прогрессии
     # цикл: длина прогрессии минус первоначально известный элемент
-    for _ in range(len_of_progression - 1):
+    START_LEN_PROGRESSION: int = 1
+    for _ in range(len_of_progression - START_LEN_PROGRESSION):
         # сумма последнего элемента прогрессии и длины шага прогрессии
         new_element: int = subsequence[-1] + step_of_progression
         # добавляем новый элемент в список прогрессии
         subsequence.append(new_element)
     
     # задаём позицию неизвестного числа
-    position_unknown: int = randint(1, len_of_progression) - 1
+    position_unknown: int = (
+    randint(1, len_of_progression) - START_LEN_PROGRESSION
+    )
     # правильный ответ для сравнения со вводом игрока
     correct_answer = subsequence[position_unknown]
     # удаляем неизвестное из списка прогрессии

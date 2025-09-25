@@ -13,14 +13,14 @@ def rules_the_game():  # объясняем правила конкретной 
 
 def is_prime_game():
     # список простых чисел от 0 до 100
-    simple_nums: list = [2, 3, 5, 7, 11, 13, 17, 
+    SIMPLE_NUMS: list[int] = [2, 3, 5, 7, 11, 13, 17, 
                         19, 23, 29, 31, 37, 41, 
                         43, 47, 53, 59, 61, 67,
                         71, 73, 79, 83, 89, 97]
     unknown: int = randint(0, 100)  # создаём неизвестное
     # проверяем, входит ли неизвестное в наш список
     # и сверяем ответ игрока с верным
-    if unknown in simple_nums:
+    if unknown in SIMPLE_NUMS:
         correct_answer: str = 'yes'
     else:
         correct_answer = 'no'

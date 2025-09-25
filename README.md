@@ -28,14 +28,5 @@ brain-progression
 brain-prime
 ```
 
-## Demo brain-even and brain-calc:
-[![asciicast](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai.svg)](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai)
-
-## Demo brain-gcd:
-[![asciicast](https://asciinema.org/a/io4eowdu8VkrhtUwdpD1yo1FM.svg)](https://asciinema.org/a/io4eowdu8VkrhtUwdpD1yo1FM)
-
-## Demo brain-progression:
-[![asciicast](https://asciinema.org/a/GjoQMrDWUUiN9QCYSVbj6WJji.svg)](https://asciinema.org/a/GjoQMrDWUUiN9QCYSVbj6WJji)
-
-## Demo brain-prime:
-[![asciicast](https://asciinema.org/a/n60FatQCY8NDCC4DSj0KlSgc6.svg)](https://asciinema.org/a/n60FatQCY8NDCC4DSj0KlSgc6)
+## Install and demo brain-game:
+[![asciicast](https://asciinema.org/a/ISlo2bvdem0VXFwstEclVSRLu.svg)](https://asciinema.org/a/ISlo2bvdem0VXFwstEclVSRLu)

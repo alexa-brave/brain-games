@@ -1,17 +1,32 @@
-### how to
-## development
-1. clone the repo
-2. install uv package manager:
-\>\>\> python3 -m pip install -U pip && pip install uv
-3. Build the project:
-\>\>\> uv build
-4. Install the package:
-\>\>\> uv tool install --force dist/hexlet_code-0.1.0-py3-none-any.whl
-5. Run the game:
-\>\>\> brain-even or brain-calc or brain-gcd or brain-progression or brain-prime
+# brain-games
 
-### Hexlet tests and linter status:
+## Hexlet tests and linter status:
 [![Actions Status](https://github.com/alexa-brave/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alexa-brave/python-project-49/actions)
+[![Actions Status](https://sonarcloud.io/summary/overall?id=alexa-brave_brain-games&branch=main.svg)](https://sonarcloud.io/summary/overall?id=alexa-brave_brain-games&branch=main)
+
+
+## Links
+### This project was built using these tools:
+| Tool | Description |
+|:----:|-------------|
+| [uv](https://docs.astral.sh/uv/) | An extremely fast Python package and project manager, written in Rust |
+| [ruff](https://docs.astral.sh/ruff/) | An extremely fast Python linter and code formatter, written in Rust |
+
+## Setup
+```bash
+python3 -m pip install -U pip && pip install uv
+uv build
+uv tool install --force dist/hexlet_code-0.1.0-py3-none-any.whl
+```
+## Examples
+5. Run the game:
+```bash
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
 
 ## Demo brain-even and brain-calc:
 [![asciicast](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai.svg)](https://asciinema.org/a/f5gJLUDrlA5pvRY5Xok49rRai)

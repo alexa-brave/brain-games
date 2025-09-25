@@ -3,6 +3,7 @@
 
 # Кэш Python
 __pycache__/
+*.pyc
 
 # Сборочные артефакты
 dist/
@@ -20,3 +21,9 @@ pip-wheel-metadata/
 
 # Файлы редакторов / IDE
 .vscode/
+
+# macOS служебные файлы
+.DS_Store
+
+# Ruff кэш
+.ruff_cache/

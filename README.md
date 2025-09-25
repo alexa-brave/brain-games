@@ -16,7 +16,7 @@ This project was built using these tools:
 ```bash
 python3 -m pip install -U pip && pip install uv
 uv build
-uv tool install --force dist/hexlet_code-0.1.0-py3-none-any.whl
+uv uv tool install --force dist/hexlet_code-0.1.0-py3-none-any.whl
 ```
 ## Examples
 5. Run the game:

@@ -1,18 +1,17 @@
 from random import randint  # для случайного выбора чисел
 import math
-# import sys
 from brain_games.scripts.games_logic import question
 
 # пользователю показывается два случайных числа, например,
 # 25 50. Пользователь должен вычислить и ввести наибольший
 # общий делитель этих чисел.
 
-# Добавьте в README.md аскинему с запуском и демонстрацией различных исходов игры
 
 def rules_the_game():  # объясняем правила игры
     print('Find the greatest common divisor of given numbers.')
 
-def gcd_game():  # поиск неизвестных
+
+def is_gcd_game():  # поиск неизвестных
     # рандомизация неизвестных мини-игры
     num_1: int = randint(-100, 100)
     num_2: int = 0  # задаём стартовое значение для цикла
@@ -35,7 +34,8 @@ def gcd_game():  # поиск неизвестных
 def main():  # точка входа для мини-игры brain-gcd
     # запускаем универсальную для всех мини-игр функцию
     # даём ей на вход неизвестное и правильный ответ для этой мини-игры
-    question(gcd_game, rules_the_game)
+    question(is_gcd_game, rules_the_game)
+
 
 if __name__ == '__main__':
     main()

@@ -1,15 +1,21 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "Набор консольных игр «Игры разума» для тренировки мозга"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "prompt>=0.4.1",
-    "ruff>=0.13.2",
+license = { text = "MIT" }
+
+authors = [
+  { name = "Александра Смелая" }
 ]
 
+dependencies = [
+    "prompt>=0.4.1",
+]
 
+[tool.uv.dev-dependencies]
+ruff = ">=0.13.2"
 
 [build-system]
 requires = ["hatchling"]

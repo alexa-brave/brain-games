@@ -2,11 +2,11 @@
 
 ## Hexlet tests and linter status:
 [![Actions Status](https://github.com/alexa-brave/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alexa-brave/python-project-49/actions)
-[![Actions Status](https://sonarcloud.io/summary/overall?id=alexa-brave_brain-games&branch=main.svg)](https://sonarcloud.io/summary/overall?id=alexa-brave_brain-games&branch=main)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-brave_brain-games&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=alexa-brave_brain-games)
 
 
 ## Links
-### This project was built using these tools:
+This project was built using these tools:
 | Tool | Description |
 |:----:|-------------|
 | [uv](https://docs.astral.sh/uv/) | An extremely fast Python package and project manager, written in Rust |

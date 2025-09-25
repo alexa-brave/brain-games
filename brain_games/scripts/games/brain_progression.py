@@ -29,8 +29,8 @@ def is_progression_game():  # выбор неизвестных для одно�
     correct_answer = subsequence[position_unknown]  # правильный ответ для сравнения со вводом игрока
     subsequence.remove(correct_answer)  #  удаляем неизвестное из списка прогрессии
     subsequence.insert(position_unknown, '..')  # ставим вместо неизвестного '..'
-    unknown: list = subsequence  # последовательность с пропущеным неизвестным
-    return str(unknown), str(correct_answer)
+    unknown: list = ', '.join(map(str,subsequence))  # последовательность с пропущеным неизвестным
+    return unknown, str(correct_answer)
 
 
 def main():  # точка входа для мини-игры

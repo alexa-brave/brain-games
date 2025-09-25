@@ -4,6 +4,14 @@
 [![Actions Status](https://github.com/alexa-brave/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/alexa-brave/python-project-49/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alexa-brave_brain-games&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=alexa-brave_brain-games)
 
+## Description
+**«Игры разума»** — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+
+* _Калькулятор._ Арифметические выражения, которые необходимо вычислить
+* _Прогрессия._ Поиск пропущенных чисел в последовательности чисел
+* _Определение четного числа_
+* _Определение наибольшего общего делителя_
+* _Определение простого числа_
 
 ## Links
 This project was built using these tools:

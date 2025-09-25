@@ -14,8 +14,11 @@ dependencies = [
     "prompt>=0.4.1",
 ]
 
-[tool.uv.dev-dependencies]
-ruff = ">=0.13.2"
+[tool.uv]
+dev-dependencies = [
+  "ruff>=0.13.2"
+]
+
 
 [build-system]
 requires = ["hatchling"]

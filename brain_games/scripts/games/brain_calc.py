@@ -1,5 +1,8 @@
-from random import randint  # для случайного выбора чисел
-from random import choice  # для случайного выбора оперантов
+from random import (
+    choice,  # для случайного выбора оперантов
+    randint,  # для случайного выбора чисел
+)
+
 from brain_games.scripts.games_logic import question
 
 

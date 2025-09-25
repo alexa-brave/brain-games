@@ -1,5 +1,6 @@
-from brain_games.scripts.welcome_user import welcome_user
 import prompt
+
+from brain_games.scripts.welcome_user import welcome_user
 
 # Общая логика для всех игр:
 # задать вопрос, получить ответ, сравнить ответ; везде 3 вопроса
@@ -22,7 +23,9 @@ def question(mini_game, rules):  # общая логика всех мини-и�
             print('Correct!')  # ответ верный
             cycles += 1
         else:  # ответ неверный
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'.")
             # проигрыш, завершение игры
             return print(f"Let's try again, {player_name}!")
     return print(f"Congratulations, {player_name}!")  # выигрыш, завершение игры

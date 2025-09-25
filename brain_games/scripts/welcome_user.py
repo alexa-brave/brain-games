@@ -1,5 +1,6 @@
 import prompt
 
+
 def welcome_user():  # приветствие игрока
     print('Welcome to the Brain Games!')
     # узнаём имя и обращаемся по нему

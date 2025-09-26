@@ -6,17 +6,16 @@ from random import (
 from brain_games.scripts.games_logic import question
 
 
-def rules_the_game() -> None:  # объясняем правила игры
+def rules_the_game() -> None:
     print('What is the result of the expression?')
 
 
 # выбор неизвестных для одного раунда игры brain_calc
 def is_calc_game() -> tuple[str, str]:
-    num_1: int = randint(0, 100)  # генерируем первое число
-    num_2: int = randint(0, 100)  # генерируем второе число
-    # рандомизация выбора операнда
+    num_1: int = randint(0, 100)
+    num_2: int = randint(0, 100)
     operation_signs: str = choice(['+', '-', '*'])
-    # выбираем действие и считаем результат
+
     unknown: str
     correct_answer: str
     match operation_signs:
@@ -33,8 +32,6 @@ def is_calc_game() -> tuple[str, str]:
 
 
 def main() -> None:
-    # запускаем универсальную для всех мини-игр функцию
-    # даём ей на вход неизвестное и правильный ответ для этой мини-игры
     question(is_calc_game, rules_the_game)
 
 

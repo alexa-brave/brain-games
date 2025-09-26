@@ -7,18 +7,20 @@ from brain_games.scripts.welcome_user import welcome_user
 # реакции на верные и неверные ответы одинаковые
 
 
-def question(mini_game, rules):  # общая логика всех мини-игр
-    player_name = welcome_user()  # приветствие + узнаём имя игрока
+def question(mini_game, rules) -> None:  # общая логика всех мини-игр
+    player_name: str = welcome_user()  # приветствие + узнаём имя игрока
     rules()  # объсняем правила идущей мини-игры
     cycles: int = 0  # отсчёт циклов с верными ответами
     while cycles != 3:
         # запускается функция для выбора неизвестного под конкретную игру 
         # и содержащая в себе правильный ответ
+        unknown: str
+        correct_answer: str
         unknown, correct_answer = mini_game()
         # задаём игроку вопрос с полученным выше неизвестным
         print(f"Question: {unknown}")
         # просим ввести ответ и получаем ввод
-        answer = prompt.string('Your answer: ')
+        answer: str = prompt.string('Your answer: ')
         if answer == correct_answer:  # сравниваем ответ игрока с правильным
             print('Correct!')  # ответ верный
             cycles += 1

@@ -8,11 +8,11 @@ from brain_games.scripts.games_logic import question
 # общий делитель этих чисел.
 
 
-def rules_the_game():  # объясняем правила игры
+def rules_the_game() -> None:  # объясняем правила игры
     print('Find the greatest common divisor of given numbers.')
 
 
-def is_gcd_game():  # поиск неизвестных
+def is_gcd_game() -> tuple[str, str]:  # поиск неизвестных
     # рандомизация неизвестных мини-игры
     num_1: int = randint(-100, 100)
     num_2: int = 0  # задаём стартовое значение для цикла
@@ -22,18 +22,17 @@ def is_gcd_game():  # поиск неизвестных
             num_2: int = randint(-100, 100)
     else:
         num_2: int = randint(-100, 100)
-        print(num_1, num_2)
     # выясняем правильный ответ, используя функцию для поиска НОД,
     # делаем результат строкой, тк ввод игрока будет в виде строки,
     # а его ввод будет сравниваться с правильным ответом
     correct_answer: str = str(math.gcd(num_1, num_2))
     # делаем результат строкой для стандартизации аргументов в функции
     # логики вопросов, чтобы 2 числа были 1 аргументом
-    result: str = f'{num_1} {num_2}'
-    return result, correct_answer
+    unknown: str = f'{num_1} {num_2}'
+    return unknown, correct_answer
 
 
-def main():  # точка входа для мини-игры brain-gcd
+def main() -> None:  # точка входа для мини-игры brain-gcd
     # запускаем универсальную для всех мини-игр функцию
     # даём ей на вход неизвестное и правильный ответ для этой мини-игры
     question(is_gcd_game, rules_the_game)

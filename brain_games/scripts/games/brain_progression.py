@@ -10,11 +10,11 @@ from brain_games.scripts.games_logic import question
 # выбирается случайным образом
 
 
-def rules_the_game():  # объясняем правила конкретной мини игры
+def rules_the_game() -> None:  # объясняем правила конкретной мини игры
     print('What number is missing in the progression?')
 
 
-def is_progression_game():  # выбор неизвестных для одного раунда игры
+def is_progression_game() -> tuple[str, str]:  # выбор неизвестных для одного раунда игры
     # задаём длину прогрессии в рамках рекомендуемой длины
     len_of_progression: int = randint(5, 15)
     start_num: int = randint(1, 100)  # задаём стартовое число
@@ -35,17 +35,17 @@ def is_progression_game():  # выбор неизвестных для одно�
     randint(1, len_of_progression) - START_LEN_PROGRESSION
     )
     # правильный ответ для сравнения со вводом игрока
-    correct_answer = subsequence[position_unknown]
+    correct_answer: int = subsequence[position_unknown]
     # удаляем неизвестное из списка прогрессии
     subsequence.remove(correct_answer)
     # ставим вместо неизвестного '..'
     subsequence.insert(position_unknown, '..')
     # последовательность с пропущеным неизвестным
-    unknown: list = ' '.join(map(str, subsequence))
+    unknown: str = ' '.join(map(str, subsequence))
     return unknown, str(correct_answer)
 
 
-def main():  # точка входа для мини-игры
+def main() -> None:  # точка входа для мини-игры
     # запускаем универсальную для всех мини-игр функцию
     # даём ей на вход неизвестное и правильный ответ для этой мини-игры
     question(is_progression_game, rules_the_game)

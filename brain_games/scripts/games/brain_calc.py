@@ -14,7 +14,8 @@ def rules_the_game() -> None:  # объясняем правила игры
 def is_calc_game() -> tuple[str, str]:
     num_1: int = randint(0, 100)  # генерируем первое число
     num_2: int = randint(0, 100)  # генерируем второе число
-    operation_signs: str = choice(['+', '-', '*'])  # рандомизация выбора операнда
+    # рандомизация выбора операнда
+    operation_signs: str = choice(['+', '-', '*'])
     # выбираем действие и считаем результат
     unknown: str
     correct_answer: str

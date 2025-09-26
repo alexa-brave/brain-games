@@ -7,11 +7,12 @@ from brain_games.scripts.welcome_user import welcome_user
 # реакции на верные и неверные ответы одинаковые
 
 
-def question(mini_game, rules) -> None:  # общая логика всех мини-игр
+def question(mini_game, show_rules) -> None:  # общая логика всех мини-игр
     player_name: str = welcome_user()  # приветствие + узнаём имя игрока
-    rules()  # объсняем правила идущей мини-игры
-    cycles: int = 0  # отсчёт циклов с верными ответами
-    while cycles != 3:
+    show_rules()  # объсняем правила идущей мини-игры
+    streak: int = 0  # отсчёт циклов с верными ответами
+    MAX_ATTEMPTS = 3  # нужное количество верных ответов
+    while streak != MAX_ATTEMPTS:
         # запускается функция для выбора неизвестного под конкретную игру 
         # и содержащая в себе правильный ответ
         unknown: str
@@ -23,7 +24,7 @@ def question(mini_game, rules) -> None:  # общая логика всех ми
         answer: str = prompt.string('Your answer: ')
         if answer == correct_answer:  # сравниваем ответ игрока с правильным
             print('Correct!')  # ответ верный
-            cycles += 1
+            streak += 1
         else:  # ответ неверный
             print(
                 f"'{answer}' is wrong answer ;(. "

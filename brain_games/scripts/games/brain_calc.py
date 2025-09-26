@@ -16,7 +16,8 @@ def is_calc_game() -> tuple[str, str]:
     num_2: int = randint(0, 100)  # генерируем второе число
     operation_signs: str = choice(['+', '-', '*'])  # рандомизация выбора операнда
     # выбираем действие и считаем результат
-    unknown: str = ""
+    unknown: str
+    correct_answer: str
     match operation_signs:
         case '+':
             unknown = f"{num_1} + {num_2}"

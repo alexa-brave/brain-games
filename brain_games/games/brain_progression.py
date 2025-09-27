@@ -24,14 +24,18 @@ def is_progression_game() -> tuple[str, str]:
     position_unknown: int = (
     randint(1, len_of_progression) - START_LEN_PROGRESSION
     )
-    correct_answer: int = subsequence[position_unknown]
-    # удаляем неизвестное из списка прогрессии
-    subsequence.remove(correct_answer)
-    # ставим вместо неизвестного '..'
+    # вариант упрощения решения от наставника
+    correct_answer: int = subsequence.pop(position_unknown)
+    print(correct_answer)
+    print(subsequence, 'list without unk')
     subsequence.insert(position_unknown, '..')
-    # последовательность с пропущеным неизвестным
     unknown: str = ' '.join(map(str, subsequence))
     return unknown, str(correct_answer)
+
+# Моё решение:
+#     correct_answer: int = subsequence[position_unknown]
+#     # удаляем неизвестное из списка прогрессии
+#     subsequence.remove(correct_answer)
 
 
 def main() -> None:
